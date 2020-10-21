@@ -29,7 +29,7 @@
 
 </head>
 <body>
-
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
 <div class="topnav">
 
@@ -42,7 +42,7 @@
 </div >
 
 
-<div class="w3-content w3-display-container test" >
+<div class="w3-content w3-display-container slides" >
     <img class="mySlides" src="slideshow1.jpg" style="width:100%" alt ="?">
     <img class="mySlides" src="slideshow2.jpg" style="width:100%" alt ="?">
     <img class="mySlides" src="slideshow3.jpg" style="width:100%" alt ="?">
@@ -62,36 +62,75 @@
 </div>
 
 
-    <div class="card mb-3 newsTopic">
-        <img src="slideshow2.jpg" class="card-img-top newsImg" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+
+        <div class = "newsTopic">
+
+            <img src="slideshow1.jpg" class="newsImg" alt="?" align = "right">
+            <h1> News 1 </h1>
+            <b>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sit amet vestibulum eros. Etiam imperdiet venenatis accumsan. Morbi mollis posuere neque vitae aliquam. Etiam imperdiet venenatis accumsan. Etiam imperdiet venenatis accumsan. Etiam imperdiet venenatis accumsan. Etiam imperdiet venenatis accumsan.
+            </b>
+
         </div>
-    </div>
 
-    <div class="card mb-3 newsTopic">
-        <img src="slideshow1.jpg" class="card-img-top newsImg" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        <div class = "newsTopic newsTopic2">
+
+            <img src="slideshow3.jpg" class="newsImg" alt="?" align="left">
+            <h1> News 2 </h1>
+            <b>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sit amet vestibulum eros. Etiam imperdiet venenatis accumsan. Morbi mollis posuere neque vitae aliquam. Etiam imperdiet venenatis accumsan. Etiam imperdiet venenatis accumsan. Etiam imperdiet venenatis accumsan. Etiam imperdiet venenatis accumsan.
+            </b>
         </div>
-    </div>
+
+        <div class ="news">
+            <div class = "newsTopic newsTopic3">
+
+                <img src="paper.jpg" class="newsImg" alt="?" align = "right">
+                <h1> News 3 </h1>
+                <b>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sit amet vestibulum eros. Etiam imperdiet venenatis accumsan. Morbi mollis posuere neque vitae aliquam. Etiam imperdiet venenatis accumsan. Etiam imperdiet venenatis accumsan. Etiam imperdiet venenatis accumsan. Etiam imperdiet venenatis accumsan.
+                </b>
+
+            </div>
+
+            <div class = "newsTopic newsTopic4">
+
+                <img src="slideshow2.jpg" class="newsImg" alt="?" align="left">
+                <h1> News 4 </h1>
+                <b>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sit amet vestibulum eros. Etiam imperdiet venenatis accumsan. Morbi mollis posuere neque vitae aliquam. Etiam imperdiet venenatis accumsan. Etiam imperdiet venenatis accumsan. Etiam imperdiet venenatis accumsan. Etiam imperdiet venenatis accumsan.
+                </b>
+            </div>
 
 
 
 
 
-<!-- Do not display this image at the moment
-<img class="mySlides" src="slideshow1.jpg">
-<img class="mySlides" src="slideshow2.jpg">
-<img class="mySlides" src="slideshow3.jpg">
 
-<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button
--->
+
+
+
+        <script>
+            //Get the button
+            var mybutton = document.getElementById("myBtn");
+
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function() {scrollFunction()};
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    mybutton.style.display = "block";
+                } else {
+                    mybutton.style.display = "none";
+                }
+            }
+
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+        </script>
 
 
 <script>
@@ -136,7 +175,7 @@
         myIndex++;
         if (myIndex > x.length) {myIndex = 1}
         x[myIndex-1].style.display = "block";
-        setTimeout(carousel, 3000); // Change image every 2 seconds
+        setTimeout(carousel, 5000); // Change image every 2 seconds
         plusDivs(1)
     }
 </script>
